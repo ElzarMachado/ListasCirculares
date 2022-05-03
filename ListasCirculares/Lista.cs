@@ -102,7 +102,7 @@ namespace ListasCirculares
             if (ValidaVacio() == false)
             {
                 nodoActual = Buscar(dato);
-                if (nodoActual != null)
+                if (nodoActual != nodoInicial)
                 {
                     Nodo nodoAnterior = BuscarAnterior(dato);
                     nodoAnterior.Enlace = nodoActual.Enlace;

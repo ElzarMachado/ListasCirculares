@@ -12,8 +12,8 @@ Console.WriteLine(listas.RecorrerLista());
 Console.WriteLine("---------------------------------------------------------");
 
 Console.WriteLine("Buscando siguiente a Cuatro");
-Nodo nodoBusqueda = listas.Buscar("Cuatro");
-Console.WriteLine(nodoBusqueda.Enlace.Valor);
+Nodo nodoPosteriorAtres = listas.Buscar("Cuatro");
+Console.WriteLine(nodoPosteriorAtres.Enlace.Enlace.Valor);
 Console.WriteLine("--------------------------------------------------------");
 
 Console.WriteLine("Borrar Uno");
