@@ -14,23 +14,23 @@ namespace ListasCirculares
         public Lista()
         {
             nodoInicial = new Nodo();
+            nodoInicial.Enlace = nodoInicial;
         }
         public bool ValidaVacio()
         {
-            return (nodoInicial.Sig == null);
-            return (nodoInicial.Ant == null);
+            return (nodoInicial.Enlace == nodoInicial);
         }
         public void Vaciar()
         {
-            nodoInicial.Sig = null;
+            nodoInicial.Enlace = nodoInicial;
         }
         public string RecorrerLista()
         {
             string datosLista = "";
             nodoActual = nodoInicial;
-            while (nodoActual.Sig != null)
+            while (nodoActual.Enlace != nodoInicial)
             {
-                nodoActual = nodoActual.Sig;
+                nodoActual = nodoActual.Enlace;
                 datosLista += $"{nodoActual.Valor}\n";
             }
             return datosLista;
@@ -38,13 +38,13 @@ namespace ListasCirculares
         public void AgregarNodo(string dato)
         {
             nodoActual = nodoInicial;
-            while (nodoActual.Sig != null)
+            while (nodoActual.Enlace != nodoInicial)
             {
-                nodoActual = nodoActual.Sig;
+                nodoActual = nodoActual.Enlace;
             }
-            Nodo nodoNuevo = new Nodo(dato);
-            nodoActual.Sig = nodoNuevo;
-            nodoNuevo.Ant = nodoActual;
+            Nodo nodoNuevo = new Nodo(dato, nodoInicial);
+            nodoActual.Enlace = nodoNuevo;
+            
         }
         public Nodo Buscar(string dato)
         {
