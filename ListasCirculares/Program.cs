@@ -11,11 +11,11 @@ listas.AgregarNodo("Cuatro");
 Console.WriteLine(listas.RecorrerLista());
 Console.WriteLine("---------------------------------------------------------");
 
-Console.WriteLine("Buscando siguiente a Tres");
-Nodo nodoBusqueda = listas.Buscar("Tres");
+Console.WriteLine("Buscando siguiente a Cuatro");
+Nodo nodoBusqueda = listas.Buscar("Cuatro");
 Console.WriteLine(nodoBusqueda.Enlace.Valor);
 Console.WriteLine("--------------------------------------------------------");
 
-Console.WriteLine("Borrar Cero");
-listas.BorrarNodo("Cero");
+Console.WriteLine("Borrar Uno");
+listas.BorrarNodo("Uno");
 Console.WriteLine(listas.RecorrerLista());

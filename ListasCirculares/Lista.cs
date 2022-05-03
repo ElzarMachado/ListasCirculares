@@ -105,9 +105,8 @@ namespace ListasCirculares
                 if (nodoActual != null)
                 {
                     Nodo nodoAnterior = BuscarAnterior(dato);
-                    nodoActual.Enlace = null;
                     nodoAnterior.Enlace = nodoActual.Enlace;
-                    
+                    nodoActual.Enlace = null;
                 }
             }
         }
