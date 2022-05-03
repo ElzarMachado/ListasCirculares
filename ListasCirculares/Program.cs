@@ -7,20 +7,15 @@ listas.AgregarNodo("Cero");
 listas.AgregarNodo("Uno");
 listas.AgregarNodo("Dos");
 listas.AgregarNodo("Tres");
+listas.AgregarNodo("Cuatro");
 Console.WriteLine(listas.RecorrerLista());
 Console.WriteLine("---------------------------------------------------------");
 
-Console.WriteLine();
-Console.WriteLine("Buscando Nodo Dos");
-Nodo nodoBusqueda = listas.Buscar("Dos");
-Console.WriteLine(nodoBusqueda.Valor);
+Console.WriteLine("Buscando siguiente a Tres");
+Nodo nodoBusqueda = listas.Buscar("Tres");
+Console.WriteLine(nodoBusqueda.Enlace.Valor);
 Console.WriteLine("--------------------------------------------------------");
 
-Console.WriteLine("Buscando nodo anterior al Dos");
-Nodo nodoDos = listas.Buscar("Dos");
-Console.WriteLine(nodoDos.Ant.Valor);
-Console.WriteLine("--------------------------------------------------------");
-
-Console.WriteLine("Borrando Dos");
-listas.BorrarNodo("Dos");
+Console.WriteLine("Borrar Cero");
+listas.BorrarNodo("Cero");
 Console.WriteLine(listas.RecorrerLista());
