@@ -9,13 +9,11 @@ namespace ListasCirculares
     public class Nodo
     {
         public string Valor { get; set; }
-        public Nodo Ant { get; set; }
-        public Nodo Sig { get; set; }
-        public Nodo(string valor = "", Nodo ant = null, Nodo sig = null)
+        public Nodo Enlace { get; set; }
+        public Nodo (string valor = "", Nodo enlace = null)
         {
             Valor = valor;
-            Ant = ant;
-            Sig = sig;
+            Enlace = enlace;
         }
     }
 }
