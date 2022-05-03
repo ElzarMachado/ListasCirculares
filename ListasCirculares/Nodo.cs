@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ListasCirculares
 {
-    internal class Nodo
+    public class Nodo
     {
+        public string Valor { get; set; }
+        public Nodo Ant { get; set; }
+        public Nodo Sig { get; set; }
+        public Nodo(string valor = "", Nodo ant = null, Nodo sig = null)
+        {
+            Valor = valor;
+            Ant = ant;
+            Sig = sig;
+        }
     }
 }
